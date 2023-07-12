@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goforus Tech Hub - Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: orangered;
+    }
+    
+    .container {
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #003d7c;
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-family: initial;
+      margin-top: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .motto {
+      color: #003d7c;
+      font-size: 24px;
+      margin-top: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .service {
+      position: relative;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #ffbf00;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .service:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 86.6px solid auto;
+      z-index: -1;
+    }
+    
+    .service-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #003d7c;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .service-description {
+      color: auto;
+      font-size: 16px;
+      font-style: italic;
+      font-size: large;
+      line-height: 1.5;
+    }
+    
+    .contact-section {
+      margin-top: 30px;
+    }
+    
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .contact-icons i {
+      font-size: 36px;
+      color:green;
+      margin: 0 30px;
+      transition: color 0.3s ease;
+    }
+  
+    .contact-icons i:hover {
+      color: red;
+      font-size: large;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #003d7c;
+    }
+    
+    .contact-info i {
+      margin-right: 5px;
+    }
+    
+    .save-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .save-button button {
+      padding: 10px 20px;
+      background-color: #003d7c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .save-button button:hover {
+      background-color: #ffbf00;
+    }
+    
+    .service-selection {
+      margin-top: 30px;
+      display: none;
+    }
+    
+    .service-selection label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .service-selection select {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .continue-button {
+      margin-top: 20px;
+    }
+    
+    .continue-button button {
+      padding: 10px 20px;
+      background-color: #ffbf00;
+      color: #003d7c;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .continue-button button:hover {
+      background-color: #003d7c;
+      color: #fff;
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: initial;
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        cursor: pointer;
+      }
+      
+      .service:before {
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-bottom: 121.2px solid #ffbf00;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .contact-section {
+        text-align: center;
+      }
+  
+      .contact-icons {
+        flex-wrap: wrap;
+      }
+  
+      .contact-info {
+        margin-top: 10px;
+      }
+    }
+  </style>
+  
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <h1>Goforus Tech Hub</h1>
+   <h2>Services we offer</h2>
+   <p>Limited <strong>offer of Free 5 pages</strong> for you!</p>
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-title">Website Development</div>
+        <div class="service-description">
+          We craft stunning websites that captivate your audience and <strong>drive business growth</strong>.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">Mobile App Development</div>
+        <div class="service-description">
+          Our experts build innovative mobile applications that deliver exceptional user experiences.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">E-commerce Solutions</div>
+        <div class="service-description">
+          We create seamless and secure e-commerce platforms to boost your online sales and revenue.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">UI/UX Design</div>
+        <div class="service-description">
+          Our talented designers create visually stunning and user-friendly interfaces for enhanced engagement.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">Digital Marketing</div>
+        <div class="service-description">
+          Our data-driven strategies and cutting-edge techniques <strong>drive brand awareness</strong> and accelerate growth.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">Cloud Hosting</div>
+        <div class="service-description">
+          We provide reliable and scalable cloud hosting solutions to ensure your applications perform optimally.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">University Projects</div>
+        <div class="service-description">
+          Need help with your university projects? Our experienced team can assist you in developing and implementing innovative solutions.
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-title">Free IT Lessons</div>
+        <div class="service-description">
+          Enhance your IT skills with our free lessons. Learn the latest technologies and stay ahead in the digital world.
+        </div>
+      </div>
+    </div>
+    <p class="motto">Innovate. Transform. Succeed.</p>
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <div class="contact-icons">
+        <div class="contact-info">
+
+          <a href="https://wa.me/256781853679?text=Hello Lordzeck%2C%20I%20am%20interested%20in one of %20your%20services listed below%2C%20May i have%20your%20attention please?%0A%0A1. Website%20Development%0A2. Mobile%20App%20Development%0A3. E-commerce%20Solutions%0A4. UI%2FUX%20Design%0A5. Digital%20Marketing%0A6. Cloud%20Hosting%0A7. University%20Projects%0A8. Free%20IT%20Lessons"><i class="fab fa-whatsapp"></i>
+         
+        </div>
+        <div class="contact-info">
+          <a href="tel:+256-703-607-601"><i class="fas fa-phone"></i></a>
+   
+        </div>
+        <div class="contact-info">
+          <a href="mailto:godlovesme1030@gmail.com"><i class="fas fa-envelope"></i></a>
+
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="save-button">
+      <button onclick="saveAsImage()">Save as Image</button>
+      
+    </div>
+    <strong><P><footer>
+      <p>&copy; 2023 Goforus Tech Hub. All rights reserved.</p>
+    </footer>
+    </P></strong>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+  <script>
+    function saveAsImage() {
+      const container = document.getElementById('container');
+      container.style.boxShadow = 'none'; // Remove box-shadow temporarily
+      const saveButton = document.querySelector('.save-button');
+      saveButton.style.display = 'none'; // Hide the save button temporarily
+      html2canvas(container, { scale: 2 }).then(canvas => { // Increase the scale to improve resolution
+        container.style.boxShadow = '0 5px 10px rgba(0, 0, 0, 0.2)'; // Restore box-shadow
+        saveButton.style.display = 'flex'; // Restore the save button
+        const context = canvas.getContext('2d');
+        context.fillStyle = '#f5f5f5';
+        context.fillRect(0, canvas.height - 30, canvas.width, 30); // Draw a white rectangle to cover the text
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'goforus_tech_hub.png';
+        link.click();
+      });
+    }
+    
+    function showServiceSelection() {
+      const serviceSelection = document.querySelector('.service-selection');
+      serviceSelection.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
